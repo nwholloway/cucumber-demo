@@ -1,0 +1,18 @@
+plugins {
+    id "java-library"
+    id "java-test-fixtures"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testFixturesImplementation testFixtures(project(':jvm-runner'))
+
+    testFixturesImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testFixturesImplementation 'org.springframework:spring-web'
+
+    testFixturesImplementation 'io.cucumber:cucumber-java'
+    testFixturesImplementation 'io.cucumber:cucumber-spring'
+}
